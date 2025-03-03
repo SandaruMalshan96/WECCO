@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WECCO</title>
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/product.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    .product-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      background-size: cover;
+      color: white;
+      text-align: left;
+      padding: 50px;
+    }
+    .content {
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      color: #222;
+    }
+    .content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+    .packaging {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .packaging button {
+      background: #8c8c6d;
+      border: none;
+      padding: 10px 15px;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .packaging button:hover {
+      background: #6c6c50;
+    }
+    @media (max-width: 768px) {
+      .product-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .content {
+        max-width: 100%;
+      }
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  </style>
+</head>
+
+<body>
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1>
+        <a href="#" class="logo">
+          <img src="./assets/images/Wecco Logo png.png" alt="WECCO Logo">
+        </a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <img src="./assets/images/Wecco Logo png.png" alt="WECCO Logo">        
+          <button class="nav-close-btn" aria-label="Clsoe menu" data-nav-toggler>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link" data-nav-link>
+              <span>Home</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./about.html" class="navbar-link" data-nav-link>
+              <span>About</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./service.html" class="navbar-link" data-nav-link>
+              <span>Service</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./coconut.html" class="navbar-link" data-nav-link>
+              <span>Coconut products</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./spices.html" class="navbar-link" data-nav-link>
+              <span>Spices</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="" class="navbar-link" data-nav-link>
+              <span>Fruits and vegetables</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./contact.html" class="navbar-link" data-nav-link>
+              <span>Contact</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <div class="header-contact">
+        <div class="contact-icon"> 
+          <ion-icon name="call-outline"></ion-icon>
+        </div>
+        <div></div>
+        <p class="contact-label">Free Call</p>
+        <a href="https://wa.me/94773459525" class="contact-number">+94 77 345 9525</a>
+      </div>
+
+    
+
+      </div>
+
+      <button class="nav-open-btn" aria-label="Open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+  <main>
+
+    <article>
+      <section class="section hero" aria-label="home" id="home"
+      style="background-image: url('./assets/images/sp-Banner.jpg')">
+      <div class="container">
+
+        <div class="hero-content">
+
+          <h2 class="h1 hero-title">
+            <span class="span">OUR ORGANIC</span> PRODUCTS
+          </h2>
+
+          <p class="hero-text">
+            All Organic | Gluten Free | High Quality
+          </p>
+
+          <a href="#" class="btn-outline">View Products</a>
+
+          <img src="./assets/images/hero-shape.png" width="116" height="116" loading="lazy"
+            class="hero-shape shape-1">
+
+          <img src="./assets/images/hero-shape.png" width="116" height="116" loading="lazy"
+            class="hero-shape shape-2">
+
+        </div>
+
+      </div>
+    </section>
+
+      <section class="product-banner fade-in" style="background: url('./assets//images/Cin.jpg') no-repeat center center/cover;">
+        <div class="content">
+          <h2>Cinnamon</h2>
+          <p>If there is a spice that Sri Lanka is particularly famous for, it’d undoubtedly be Cinnamon. 'Ceylon Cinnamon’ is world-renowned for its notable qualities such as unique flavour, colour and aroma in comparison with Cassia. It has been a major spice in Sri Lanka culture for years as a food preservative and later for its natural flavouring properties.
+
+            These thin brown pieces of bark emanate a sweet fragrance and are commonly found in bakery products, flavoured teas or meat preservation. It is not only an excellent elevator but also an acknowledged health blessing as it possesses medical properties to treat chronic diseases such as diabetes and cancer. It also contains some anti-inflammatory properties.
+            
+            As Sri Lanka's most important spice export Ceylon Cinnamon not only sees exports in its natural form but is also processed into tablets, powder or essential oils to be exported to major markets, the value and importance placed on Ceylon Cinnamon rank Sri Lanka as the source for 90% of the true cinnamon exported around the world.</p>
+        </div>
+      </section>
+      
+      <section class="product-banner fade-in" style="background: url('./assets/images/Pepper.jpg') no-repeat center center/cover;">
+        <div class="content">
+          <h2>Pepper</h2>
+          <p>The king of spice, Pepper has the second-largest spice presence in Sri Lanka and is the largest spice presence in the global market. Obtained from Piper Nigrum vines, this spice is easily recognizable for its sharp aroma and mildly spicy flavour that often let it substitute for chillies. In addition to flavouring, pepper is ripe with medicinal properties and is often used in massages or other natural treatment methods.</p>
+        </div>
+      </section>
+      
+      <section class="product-banner fade-in" style="background: url('https://agrostory.com/upload/iblock/297/297943f7d83d167aa925b03f94da07e6.jpg') no-repeat center center/cover;">
+        <div class="content">
+          <h2>Cloves (Karambunatti)</h2>
+         
+          <p>The dried unopened flower buds of an evergreen tree, this spice is easily identified by its incredibly intense spicy aroma and pungent bittersweet flavours. Cloves are an essential spice in Eastern cuisine and are primarily used to flavour and aromatize meat or rice-based dishes.
+
+            Cloves are also known to be applied as medicines for dental applications and relieving toothaches or aid with digestion difficulties or processed to form cosmetics such as perfume, soap and toothpaste. Sri Lanka commands significant attention within the cloves market as a result of displaying richer quality oils found in Sri Lankan cloves as opposed to other growers.</p>
+        </div>
+      </section>
+      <section class="product-banner fade-in" style="background: url('https://th.bing.com/th/id/R.fa555ba5369424d1edb1492f68eb0a62?rik=cZR80aI%2b%2bZOtpQ&pid=ImgRaw&r=0') no-repeat center center/cover;">
+        <div class="content">
+          <h2>Ginger</h2>
+          
+          <p>A spice that needs no introduction ginger is currently one of the most widely used spices in the world as more and more regional cuisines integrate ginger into their dishes. The spice is extracted from the thick gnarly roots of the ginger plant, originating from Asian regions it has been a favourite ingredient for both chefs and doctors thanks to its sheer versatility in both culinary and medicinal applications.
+
+            A staple in Sri Lankan and Asian cuisine as whole ginger imparts a tart flavour with some peppery heat and mild sweetness that mellows when cooked. Ginger is used to tenderizing and flavour meats and adds complexity to any dish it's used in. Ginger can also be ground into a fine powder to be used in making desserts or sliced and steeped with hot water to make ginger tea which is a popular beverage rich with health benefits.
+            
+            Beyond its use as a spice, ginger is renowned for its array of health benefits it is a known Antioxidant and has been found to greatly alleviate digestion difficulties and nausea, reduce muscle pains and inflammation while ginger extract helps with supporting cardiovascular health.</p>
+            <button class="info-btn">More Info</button>
+        </div>
+      </section>
+  
+
+    </article>
+  </main>
+  
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">WECCO</a>
+
+          <p class="footer-text">
+            Many desktop publishing packages and web page editors now use are dolra Ipsum as their default.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Quick Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Services</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Blog</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">FAQ</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Services</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Warehouse</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Air Freight</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Ocean Freight</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Road Freight</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Packaging</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Community</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Business Consulting</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Testimonials</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Track Your Shipment</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Condition</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; 2022 WECCO. All Rights Reserved by <a href="#" class="copyright-link">Sandaru Malshan</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/product.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

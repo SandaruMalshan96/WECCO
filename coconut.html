@@ -7,36 +7,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WECCO</title>
 
-  <!-- 
-    - favicon
-  -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <!-- 
-    - custom css link
-  -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/product.css">
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- 
-    - preload images
-  -->
+  <style>
+    .product-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      background-size: cover;
+      color: white;
+      text-align: left;
+      padding: 50px;
+    }
+    .content {
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      color: #222;
+    }
+    .content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+    .packaging {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .packaging button {
+      background: #8c8c6d;
+      border: none;
+      padding: 10px 15px;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .packaging button:hover {
+      background: #6c6c50;
+    }
+    @media (max-width: 768px) {
+      .product-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .content {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 
-<body id="top">
-
-  <!-- 
-    - #HEADER
-  -->
-
+<body>
   <header class="header" data-header>
     <div class="container">
 
@@ -83,15 +115,22 @@
 
           <li class="navbar-item">
             <a href="./coconut.html" class="navbar-link" data-nav-link>
-              <span>Coconut</span>
+              <span>Coconut products</span>
 
               <ion-icon name="chevron-forward"></ion-icon>
             </a>
           </li>
 
           <li class="navbar-item">
-            <a href="./products.html" class="navbar-link" data-nav-link>
-              <span>Our Products</span>
+            <a href="./spices.html" class="navbar-link" data-nav-link>
+              <span>Spices</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="" class="navbar-link" data-nav-link>
+              <span>Fruits and vegetables</span>
 
               <ion-icon name="chevron-forward"></ion-icon>
             </a>
@@ -131,671 +170,158 @@
     </div>
   </header>
   <main>
+
     <article>
-
-      <!-- 
-        - #HERO
-      -->
-
       <section class="section hero" aria-label="home" id="home"
-        style="background-image: url('./assets/images/banner.jpg')">
-        <div class="container">
+      style="background-image: url('./assets/images/Coco-Banner.jpg')">
+      <div class="container">
 
-          <div class="hero-content">
+        <div class="hero-content">
 
-            <h2 class="h1 hero-title">
-              <span class="span">To Every</span> Direction
-            </h2>
+          <h2 class="h1 hero-title">
+            <span class="span">OUR ORGANIC</span> PRODUCTS
+          </h2>
 
-            <p class="hero-text">
-              YOUR TRUST IS OUR STRENGTH
-            </p>
+          <p class="hero-text">
+            All Organic | Gluten Free | High Quality
+          </p>
 
-            <a href="#" class="btn-outline">View Services</a>
+          <a href="#" class="btn-outline">View Products</a>
 
-            <img src="./assets/images/hero-shape.png" width="116" height="116" loading="lazy"
-              class="hero-shape shape-1">
+          <img src="./assets/images/hero-shape.png" width="116" height="116" loading="lazy"
+            class="hero-shape shape-1">
 
-            <img src="./assets/images/hero-shape.png" width="116" height="116" loading="lazy"
-              class="hero-shape shape-2">
-
-          </div>
+          <img src="./assets/images/hero-shape.png" width="116" height="116" loading="lazy"
+            class="hero-shape shape-2">
 
         </div>
-      </section>
 
-
-
-      <h2>Our Coconut Products</h2>
-      <div class="product-container">
-          <div class="product-card active">
-              <img src="./assets//images/p-01.jpg" alt="Organic Virgin Coconut Oil">
-              <h3>Organic Virgin Coconut Oil</h3>
-              <button class="info-btn">More Info</button>
-          </div>
-          <div class="product-card">
-              <img src="./assets//images/p-02.jpg" alt="Organic Coconut Flour">
-              <h3>Organic Coconut Flour</h3>
-              <button class="info-btn">More Info</button>
-          </div>
-          <div class="product-card">
-              <img src="./assets//images/p-03.jpg" alt="Organic Creamed Coconut">
-              <h3>Organic Creamed Coconut</h3>
-              <button class="info-btn">More Info</button>
-          </div>
-          <div class="product-card">
-              <img src="./assets//images/p-04.jpg" alt="Organic Coconut Water">
-              <h3>Organic Coconut Water</h3>
-              <button class="info-btn">More Info</button>
-          </div>
-          <div class="product-card">
-              <img src="./assets//images/p-05.jpg" alt="Organic King Coconut Water">
-              <h3>Organic King Coconut Water</h3>
-              <button class="info-btn">More Info</button>
-          </div>
-          <div class="product-card">
-              <img src="./assets//images/p-06.jpg" alt="Organic Coconut Milk">
-              <h3>Organic Coconut Milk</h3>
-              <button class="info-btn">More Info</button>
-          </div>
       </div>
-
-
-
-
-
-      <!-- 
-        - #SERVICE
-      -->
-
-      <section class="section service" id="service" aria-label="service">
-        <div class="container">
-
-          <p class="section-subtitle">All Services</p>
-
-          <h2 class="h2 section-title">Trusted For Our Services</h2>
-
-          <p class="section-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry the standard dummy text ever since
-            the when an
-            printer took.
-          </p>
-
-          <ul class="service-list grid-list">
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/service-icon-1.png" width="80" height="60" loading="lazy" alt="Truck">
-                </div>
-
-                <h3 class="h3 card-title">
-                  <span class="span">01</span> Air Freight
-                </h3>
-
-                <p class="card-text">
-                  Our aim is to optimize and improve your supply chain so that we can give you the best service.
-                </p>
-
-                <a href="#" class="btn-link">
-                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-                  <span class="span">View Detail</span>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/service-icon-2.png" width="74" height="60" loading="lazy" alt="Ship">
-                </div>
-
-                <h3 class="h3 card-title">
-                  <span class="span">02</span> Road Freight
-                </h3>
-
-                <p class="card-text">
-                  Our aim is to optimize and improve your supply chain so that we can give you the best service.
-                </p>
-
-                <a href="#" class="btn-link">
-                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-                  <span class="span">View Detail</span>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/service-icon-3.png" width="60" height="60" loading="lazy" alt="Airplane">
-                </div>
-
-                <h3 class="h3 card-title">
-                  <span class="span">03</span> Ocean Freight
-                </h3>
-
-                <p class="card-text">
-                  Our aim is to optimize and improve your supply chain so that we can give you the best service.
-                </p>
-
-                <a href="#" class="btn-link">
-                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-                  <span class="span">View Detail</span>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/service-icon-4.png" width="50" height="60" loading="lazy" alt="Train">
-                </div>
-
-                <h3 class="h3 card-title">
-                  <span class="span">04</span> Rail Freight
-                </h3>
-
-                <p class="card-text">
-                  Our aim is to optimize and improve your supply chain so that we can give you the best service.
-                </p>
-
-                <a href="#" class="btn-link">
-                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-                  <span class="span">View Detail</span>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/service-icon-5.png" width="63" height="60" loading="lazy" alt="Trolley">
-                </div>
-
-                <h3 class="h3 card-title">
-                  <span class="span">05</span> Warehousing
-                </h3>
-
-                <p class="card-text">
-                  Our aim is to optimize and improve your supply chain so that we can give you the best service.
-                </p>
-
-                <a href="#" class="btn-link">
-                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-                  <span class="span">View Detail</span>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <div class="card-icon">
-                  <img src="./assets/images/service-icon-6.png" width="46" height="60" loading="lazy" alt="Paper">
-                </div>
-
-                <h3 class="h3 card-title">
-                  <span class="span">06</span> Project Cargo
-                </h3>
-
-                <p class="card-text">
-                  Our aim is to optimize and improve your supply chain so that we can give you the best service.
-                </p>
-
-                <a href="#" class="btn-link">
-                  <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-                  <span class="span">View Detail</span>
-                </a>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #FEATURE
-      -->
-
-      <section class="section feature" aria-label="feature">
-        <div class="container">
-
-          <div class="title-wrapper">
-
-            <div>
-              <p class="section-subtitle">Estimation</p>
-
-              <h2 class="h2 section-title">Has a wide range of solutions</h2>
-
-              <p class="section-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry the standard dummy text ever
-                since the when an
-                printer took.
-              </p>
-            </div>
-
-            <a href="#" class="btn">Read More</a>
-
+    </section>
+
+      <section class="product-banner" style="background: url('https://www.cocotana.com/assets/img/blog/1.jpg') no-repeat center center/cover;">
+        <div class="content">
+          <h2>Coconut Milk</h2>
+          <h3>Packaging Options:</h3>
+          <div class="packaging">
+            <button>200 ml</button>
+            <button>300 ml</button>
+            <button>Aseptic Packing</button>
           </div>
+          <p>Coconut milk is the liquid that comes from the grated white meat of a matured Coconut. The colour and rich taste of the milk can be attributed to the high Oil content. Most of the fat is saturated fat.
 
-          <ul class="feature-list grid-list">
-
-            <li>
-              <div class="feature-card" style="--card-number: '01'">
-
-                <div class="card-icon">
-                  <img src="./assets/images/feature-icon-1.png" width="72" height="91" alt="">
-                </div>
-
-                <h3 class="h3 card-title">Solutions and specialized</h3>
-
-                <p class="card-text">
-                  Our aim is to optimize and improve your supply chain so that we can give you the best service
-                </p>
-
-                <a href="#" class="card-btn" aria-label="Read more">
-                  <ion-icon name="arrow-forward"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="feature-card" style="--card-number: '02'">
-
-                <div class="card-icon">
-                  <img src="./assets/images/feature-icon-2.png" width="94" height="94" alt="">
-                </div>
-
-                <h3 class="h3 card-title">Multiple warehouses</h3>
-
-                <p class="card-text">
-                  We provide multiple drop off and pickup locations so you don't have to worry. And you should not face
-                  any kind...
-                </p>
-
-                <a href="#" class="card-btn" aria-label="Read more">
-                  <ion-icon name="arrow-forward"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="feature-card" style="--card-number: '03'">
-
-                <div class="card-icon">
-                  <img src="./assets/images/feature-icon-3.png" width="93" height="93" alt="">
-                </div>
-
-                <h3 class="h3 card-title">Tracking made easy</h3>
-
-                <p class="card-text">
-                  A tracking number for the entire process. so that you can find the exact position. this process will
-                  help you
-                </p>
-
-                <a href="#" class="card-btn" aria-label="Read more">
-                  <ion-icon name="arrow-forward"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-          </ul>
-
+            Coconut milk is a very popular food ingredient used in the world.Coconut milk has become a highlight of many cuisines in the tropical and subtropical countries where they are grown. Coconut milk is a fantastic dairy free alternative, popular in curry dishes.</p>
         </div>
       </section>
-
-
-
-
-
-      <!-- 
-        - #PROJECT
-      -->
-
-      <section class="section project" aria-label="project">
-        <div class="container">
-
-          <p class="section-subtitle">Projects</p>
-
-          <h2 class="h2 section-title">Featured Projects</h2>
-
-          <p class="section-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry the standard dummy text ever since
-            the when an
-            printer took.
-          </p>
-
-          <ul class="project-list">
-
-            <li class="project-item">
-              <div class="project-card">
-
-                <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
-                  <img src="./assets/images/project-1.jpg" width="397" height="352" loading="lazy"
-                    alt="Warehouse inventory" class="img-cover">
-                </figure>
-
-                <button class="action-btn" aria-label="View image">
-                  <ion-icon name="expand-outline"></ion-icon>
-                </button>
-
-                <div class="card-content">
-                  <p class="card-tag">Warehousing , Distrbution</p>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Warehouse inventory</a>
-                  </h3>
-
-                  <a href="#" class="card-link">Read More</a>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="project-item">
-              <div class="project-card">
-
-                <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
-                  <img src="./assets/images/project-2.jpg" width="397" height="352" loading="lazy"
-                    alt="Warehouse inventory" class="img-cover">
-                </figure>
-
-                <button class="action-btn" aria-label="View image">
-                  <ion-icon name="expand-outline"></ion-icon>
-                </button>
-
-                <div class="card-content">
-                  <p class="card-tag">Logistics, Analytics</p>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Minimize Manufacturing</a>
-                  </h3>
-
-                  <a href="#" class="card-link">Read More</a>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="project-item">
-              <div class="project-card">
-
-                <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
-                  <img src="./assets/images/project-3.jpg" width="397" height="352" loading="lazy"
-                    alt="Warehouse inventory" class="img-cover">
-                </figure>
-
-                <button class="action-btn" aria-label="View image">
-                  <ion-icon name="expand-outline"></ion-icon>
-                </button>
-
-                <div class="card-content">
-                  <p class="card-tag">Warehousing , Distrbution</p>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Warehouse inventory</a>
-                  </h3>
-
-                  <a href="#" class="card-link">Read More</a>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="project-item">
-              <div class="project-card">
-
-                <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
-                  <img src="./assets/images/project-4.jpg" width="397" height="352" loading="lazy"
-                    alt="Warehouse inventory" class="img-cover">
-                </figure>
-
-                <button class="action-btn" aria-label="View image">
-                  <ion-icon name="expand-outline"></ion-icon>
-                </button>
-
-                <div class="card-content">
-                  <p class="card-tag">Logistics, Analytics</p>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Minimize Manufacturing</a>
-                  </h3>
-
-                  <a href="#" class="card-link">Read More</a>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="project-item">
-              <div class="project-card">
-
-                <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
-                  <img src="./assets/images/project-5.jpg" width="397" height="352" loading="lazy"
-                    alt="Warehouse inventory" class="img-cover">
-                </figure>
-
-                <button class="action-btn" aria-label="View image">
-                  <ion-icon name="expand-outline"></ion-icon>
-                </button>
-
-                <div class="card-content">
-                  <p class="card-tag">Warehousing , Distrbution</p>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Warehouse inventory</a>
-                  </h3>
-
-                  <a href="#" class="card-link">Read More</a>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="project-item">
-              <div class="project-card">
-
-                <figure class="card-banner img-holder" style="--width: 397; --height: 352;">
-                  <img src="./assets/images/project-6.jpg" width="397" height="352" loading="lazy"
-                    alt="Warehouse inventory" class="img-cover">
-                </figure>
-
-                <button class="action-btn" aria-label="View image">
-                  <ion-icon name="expand-outline"></ion-icon>
-                </button>
-
-                <div class="card-content">
-                  <p class="card-tag">Logistics, Analytics</p>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Minimize Manufacturing</a>
-                  </h3>
-
-                  <a href="#" class="card-link">Read More</a>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #BLOG
-      -->
-
-      <section class="section blog" aria-label="blog" id="blog">
-        <div class="container">
-
-          <p class="section-subtitle">Our Blogs</p>
-
-          <h2 class="h2 section-title">Recent news & events</h2>
-
-          <p class="section-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry the standard dummy text ever since
-            the when an
-            printer took.
-          </p>
-
-          <ul class="blog-list grid-list">
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner img-holder" style="--width: 770; --height: 500;">
-                  <img src="./assets/images/blog-1.jpg" width="770" height="500" loading="lazy"
-                    alt="At the end of the day, going forward, a new normal that has evolved from. your only logistic partner."
-                    class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <time class="card-meta" datetime="2022-08-02">
-                    <span class="span">02</span> Aug
-                  </time>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">
-                      At the end of the day, going forward, a new normal that has evolved from. your only logistic
-                      partner.
-                    </a>
-                  </h3>
-
-                  <p class="card-text">
-                    New chip traps clusters of migrating tumor cells asperiortenetur, blanditiis odit. typesetting
-                    industry the standard
-                    dummy text ever since the when an printer.
-                  </p>
-
-                  <a href="#" class="btn-link">
-                    <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-                    <span class="span">Read More</span>
-                  </a>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner img-holder" style="--width: 770; --height: 500;">
-                  <img src="./assets/images/blog-2.jpg" width="770" height="500" loading="lazy"
-                    alt="Going forward, a new normal that has evolved from generation. moving your products across all borders."
-                    class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <time class="card-meta" datetime="2022-08-21">
-                    <span class="span">21</span> Aug
-                  </time>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">
-                      Going forward, a new normal that has evolved from generation. moving your products across all
-                      borders.
-                    </a>
-                  </h3>
-
-                  <p class="card-text">
-                    New chip traps clusters of migrating tumor cells asperiortenetur, blanditiis odit. typesetting
-                    industry the standard
-                    dummy text ever since the when an printer.
-                  </p>
-
-                  <a href="#" class="btn-link">
-                    <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
-
-                    <span class="span">Read More</span>
-                  </a>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #NEWSLETTER
-      -->
-
-      <section class="section newsletter" aria-label="newsletter">
-        <div class="container">
-
-          <figure class="newsletter-banner img-holder">
-            <img src="./assets/images/newsletter-banner.png" width="303" height="381" alt="newsletter banner"
-              class="w-100">
-          </figure>
-
-          <div class="newsletter-content">
-
-            <h2 class="h2 section-title">Subscribe for offers and news</h2>
-
-            <form action="" class="newsletter-form">
-              <input type="email" name="email_address" placeholder="Enter Your Email" aria-label="email"
-                class="email-field">
-
-              <button type="submit" class="newsletter-btn">Subscribe Now</button>
-            </form>
-
+      
+      <section class="product-banner" style="background: url('https://www.cocotana.com/assets/img/blog/cream-new.png') no-repeat center center/cover;">
+        <div class="content">
+          <h2>Coconut Cream</h2>
+          <h3>Packaging Options:</h3>
+          <div class="packaging">
+            <button>200 ml</button>
+            <button>400 ml</button>
+            <button>Aseptic Packing</button>
           </div>
+          <p>Organic Coconut Cream is the pure natural extract of fresh, mature coconut meat at 24% fat content. The process used preserves the freshness, natural flavor and aroma, and quality of coconut cream of fresh coconuts. It is a smooth-flowing liquid and creamy white in color. No preservatives or artificial flavoring are added.
 
+            Coconut cream is a main cooking ingredient for interesting Asian dishes such as curries, desserts, and other delicacies such as puddings and rice cakes.</p>
         </div>
       </section>
+      
+      <section class="product-banner" style="background: url('https://www.cocotana.com/assets/img/blog/3.jpg') no-repeat center center/cover;">
+        <div class="content">
+          <h2>Virgin Coconut Oil</h2>
+          <h3>Packaging Options:</h3>
+          <div class="packaging">
+            <button>Retail Pouches</button>
+            <button>7 kg</button>
+            <button>10 kg</button>
+            <button>25 kg</button>
+            <button>50 kg</button>
+          </div>
+          <p>Cocotana Organic Virgin Oil which can be considered as one of the Healthiest Oils in the planet, is extracted using a Cold press & unrefined process. Our raw material is free from genetically modified organisms (GMO).
 
+            Free from Trans fatty acids and its unique combination of fatty acids can have profound positive effects on health with powerful medicinal properties. This includes fat loss, better brain function and various other amazing benefits.</p>
+        </div>
+      </section>
+      <section class="product-banner" style="background: url('https://www.cocotana.com/assets/img/blog/desi-new.png') no-repeat center center/cover;">
+        <div class="content">
+          <h2>Desiccated Coconut</h2>
+          <h3>Packaging Options:</h3>
+          <div class="packaging">
+            <button>Retail Pouches</button>
+            <button>7 kg</button>
+            <button>10 kg</button>
+            <button>25 kg</button>
+            <button>50 kg</button>
+          </div>
+          <p>"Ceylon Desiccated Coconut" as used to be known then, has remained a popular and affectionate name in the confectionary Industry the world over. Sri Lankan Desiccated Coconut is famous for its unique taste and as result is rated as a premium Quality Product in the World.
+
+            Made from pure Coconut Meat without oil extraction in conformity Desiccated Coconut is shredded, dried and unsweetened fresh meat or kernel of Mature fruit of Coconut.
+            
+            Grades
+            Desiccated Coconut (Toasted and Untoasted) is offered in the following grades based on the particle sizes.
+            
+            Medium Grade (High Fat)
+            Fine Grade (High & Low Fat)
+            Chips Grade (High Fat)
+            Threads Grade
+            Shreds Grade
+            Coconut Smiles</p>
+        </div>
+      </section>
+      <section class="product-banner" style="background: url('https://www.cocotana.com/assets/img/blog/5.jpg') no-repeat center center/cover;">
+        <div class="content">
+          <h2>Creamed Coconut</h2>
+          <h3>Packaging Options:</h3>
+          <div class="packaging">
+            <button>Retail Pouches</button>
+            <button>7 kg</button>
+            <button>10 kg</button>
+            <button>25 kg</button>
+            <button>50 kg</button>
+          </div>
+          <p>Creamed Coconut can also be called as Coconut Concentrate which is the unsweetened dehydrated fresh meat of a mature fruit of Coconut ground to a semi-solid white creamy paste. Creamed Coconut is suitable for consumption without the need of further processing.
+
+            Do not confuse between Creamed Coconut and Coconut Cream as Coconut Cream has a maximum moisture content of about 74% whereas Creamed Coconut has moisture of only 3% maximum, and is naturally known as Coconut Concentrate.</p>
+        </div>
+      </section>
+      <section class="product-banner" style="background: url('https://www.cocotana.com/assets/img/blog/flor-new.png') no-repeat center center/cover;">
+        <div class="content">
+          <h2>Coconut Flour</h2>
+          <h3>Packaging Options:</h3>
+          <div class="packaging">
+            <button>Retail Pouches</button>
+            <button>7 kg</button>
+            <button>10 kg</button>
+            <button>25 kg</button>
+            <button>50 kg</button>
+          </div>
+          <p>Coconut flour is obtained from the whitish kernel residue left after the extraction of Virgin Coconut Oil and has a potential application in high protein-fiber enriched food products.
+
+            Coconut Flour is known to have a strong sweet coco-nutty aroma. It has a white cream color and sometimes a few brown spots from coconut meat brown skin which is natural. It also has a high dietary fiber content which is 3 to 4 times more that the wheat flour, Soy flour and Rice bran.</p>
+        </div>
+      </section>
+      <section class="product-banner" style="background: url('https://www.cocotana.com/assets/img/blog/7.jpg') no-repeat center center/cover;">
+        <div class="content">
+          <h2>RBD Coconut Oil</h2>
+          <h3>Packaging Options:</h3>
+          <div class="packaging">
+            <button>200 ml</button>
+            <button>330 ml</button>
+            <button>500 ml</button>
+            <button>1 l</button>
+            <button>1.5 l</button>
+          </div>
+          <p>RBD (Refined, Bleached, Deodorised) coconut oil is produced by refining crude coconut oil. Our refinery plant uses a 100% physical process and does not add any chemicals.
+
+            Without any coconut flavour or aroma, RBD coconut oil makes a very versatile oil. It is the most commonly used commercial cooking oil worldwide, it is also used for various other cosmetic and pharmaceutical purposes.</p>
+        </div>
+      </section>
     </article>
   </main>
-
-
-
-
-
-  <!-- 
-    - #FOOTER
-  -->
+  
 
   <footer class="footer">
     <div class="container">
@@ -928,17 +454,12 @@
 
       <div class="footer-bottom">
         <p class="copyright">
-          &copy; 2022 WECCO. All Rights Reserved by <a href="#" class="copyright-link">codewithsadee</a>
+          &copy; 2022 WECCO. All Rights Reserved by <a href="#" class="copyright-link">Sandaru Malshan</a>
         </p>
       </div>
 
     </div>
   </footer>
-
-
-
-
-
   <!-- 
     - #BACK TO TOP
   -->
@@ -962,7 +483,5 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
-
 </html>
